@@ -4,15 +4,23 @@
 #region 1. Retrieve all products with a unit price greater than $50.
 
 
-var products = Products.Where(p => p.UnitPrice > 50);
-foreach (var product in products)
-{
-    Console.WriteLine(product);
-}
+//var products = Products.Where(p => p.UnitPrice > 50);
+//foreach (var product in products)
+//{
+//    Console.WriteLine(product);
+//}
 
 #endregion
 
 #region 2. List the names of all customers from London.
+//var customersFromLondon = Customers.Where(c => c.City == "London")
+//                                   .Select(c=> c.CompanyName);
+
+//foreach (var customer in customersFromLondon)
+//{
+//    Console.WriteLine(customer);
+//}
+
 #endregion
 
 #region 3. Find all orders shipped by "Speedy Express".
