@@ -1,5 +1,4 @@
 ﻿using LINQ_ProlemSolving.Entities;
-
 namespace LINQ_ProlemSolving.Data
 {
     public static class DataLists
@@ -931,3 +930,6 @@ namespace LINQ_ProlemSolving.Data
         };
     }
 }
+
+
+

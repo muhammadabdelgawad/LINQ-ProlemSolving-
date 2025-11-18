@@ -1,5 +1,15 @@
-﻿#region Easy
+﻿using static LINQ_ProlemSolving.Data.DataLists;
+
+#region Easy
 #region 1. Retrieve all products with a unit price greater than $50.
+
+
+var products = Products.Where(p => p.UnitPrice > 50);
+foreach (var product in products)
+{
+    Console.WriteLine(product);
+}
+
 #endregion
 
 #region 2. List the names of all customers from London.

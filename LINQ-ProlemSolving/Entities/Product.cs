@@ -1,4 +1,4 @@
-﻿namespace LINQ_ProlemSolving.Entities
+﻿namespace LINQ_ProlemSolving
 {
     public class Product
     {
