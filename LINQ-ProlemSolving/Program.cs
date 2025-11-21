@@ -1,4 +1,5 @@
-﻿using static LINQ_ProlemSolving.Data.DataLists;
+﻿using LINQ_ProlemSolving.Entities;
+using static LINQ_ProlemSolving.Data.DataLists;
 
 #region Easy
 #region 1. Retrieve all products with a unit price greater than $50.
@@ -24,6 +25,21 @@
 #endregion
 
 #region 3. Find all orders shipped by "Speedy Express".
+var orders = Orders.Join(Shippers,
+         order => order.ShipperID,
+          shipper => shipper.ShipperID,
+          (order, shipper) => new
+          {
+              Order = order,
+              Shipper = shipper
+          }).Where(s => s.Shipper.CompanyName == "Speedy Express").Select(s => s.Order);
+
+
+foreach (var order in orders)
+{
+    Console.WriteLine(order);
+}
+
 #endregion
 
 #region 4. Get the total number of orders placed by customer "BONAP".
