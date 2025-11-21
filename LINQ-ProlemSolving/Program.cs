@@ -1,6 +1,5 @@
-﻿using LINQ_ProlemSolving.Entities;
-using static LINQ_ProlemSolving.Data.DataLists;
-
+﻿using static System.Console;  
+using static LINQ_ProlemSolving.Data.DataLists;  
 #region Easy
 #region 1. Retrieve all products with a unit price greater than $50.
 
@@ -25,24 +24,37 @@ using static LINQ_ProlemSolving.Data.DataLists;
 #endregion
 
 #region 3. Find all orders shipped by "Speedy Express".
-var orders = Orders.Join(Shippers,
-         order => order.ShipperID,
-          shipper => shipper.ShipperID,
-          (order, shipper) => new
-          {
-              Order = order,
-              Shipper = shipper
-          }).Where(s => s.Shipper.CompanyName == "Speedy Express").Select(s => s.Order);
+//var orders = Orders.Join(Shippers,
+//         order => order.ShipperID,
+//          shipper => shipper.ShipperID,
+//          (order, shipper) => new
+//          {
+//              Order = order,
+//              Shipper = shipper
+//          }).Where(s => s.Shipper.CompanyName == "Speedy Express").Select(s => s.Order);
 
 
-foreach (var order in orders)
-{
-    Console.WriteLine(order);
-}
+//foreach (var order in orders)
+//{
+//    Console.WriteLine(order);
+//}
 
 #endregion
 
 #region 4. Get the total number of orders placed by customer "BONAP".
+
+//var customers= Customers.Join(Orders,
+//        customer=> customer.CustomerID,
+//        order => order.CustomerID,
+//        (customer,order) => new 
+//        {
+//            customer = customer,
+//            order = order
+
+//        }).Where(c => c.customer.CustomerID == "BONAP").Count();
+   
+//    WriteLine($"Total orders placed by customer 'BONAP': {customers}");
+
 #endregion
 
 #region 5. List all employees who are managers.
